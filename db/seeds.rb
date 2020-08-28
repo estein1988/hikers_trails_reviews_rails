@@ -1,7 +1,52 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Review.destroy_all
+Hiker.destroy_all
+Trail.destroy_all
+
+trail1 = Trail.create(name: "Grand Canyon - South Rim", location: "Arizona", difficulty: 9, length: 10, elevation: 5000, route: "Loop")
+trail2 = Trail.create(name: "ABQ Walk in the Park", location: "New Mexico", difficulty: 6, length: 5, elevation: 2000, route: "Out-and-back")
+trail3 = Trail.create(name: "Black Canyon", location: "Colorado", difficulty: 7, length: 2, elevation: 1000, route: "Loop")
+trail4 = Trail.create(name: "Mt. Evans", location: "Colorado", difficulty: 9, length: 3, elevation: 5000, route: "Loop")
+trail5 = Trail.create(name: "Longs Peak", location: "Colorado", difficulty: 4, length: 5, elevation: 2000, route: "Out-and-back")
+trail6 = Trail.create(name: "Moab Loop", location: "Utah", difficulty: 5, length: 5, elevation: 400, route: "Loop")
+trail7 = Trail.create(name: "Arches Monument", location: "Utah", difficulty: 9, length: 4, elevation: 900, route: "Loop")
+trail8 = Trail.create(name: "Great Salt Lake", location: "Utah", difficulty: 10, length: 11, elevation: 1500, route: "Out-and-back")
+trail9 = Trail.create(name: "Toas Loop", location: "New Mexico", difficulty: 2, length: 5, elevation: 3000, route: "Loop")
+trail10 = Trail.create(name: "Grand Canyon - North Rim", location: "Arizona", difficulty: 8, length: 4, elevation: 1000, route: "Loop")
+trail11 = Trail.create(name: "Santa Fe Tour", location: "New Mexico", difficulty: 4, length: 2, elevation: 4000, route: "Out-and-back")
+trail12 = Trail.create(name: "Hope Falls", location: "Arizona", difficulty: 6, length: 3, elevation: 5000, route: "Loop")
+
+hiker1 = Hiker.create(name: "Bob", age: 45, experience: "novice")
+hiker2 = Hiker.create(name: "Sam", age: 15, experience: "expert")
+hiker3 = Hiker.create(name: "Jim", age: 22, experience: "moderate")
+hiker4 = Hiker.create(name: "Don", age: 45, experience: "novice")
+hiker5 = Hiker.create(name: "Alex", age: 15, experience: "expert")
+hiker6 = Hiker.create(name: "Barbara", age: 30, experience: "moderate")
+hiker7 = Hiker.create(name: "Tim", age: 39, experience: "novice")
+hiker8 = Hiker.create(name: "Reinhard", age: 50, experience: "expert")
+hiker9 = Hiker.create(name: "Sanjeev", age: 40, experience: "novice")
+hiker10 = Hiker.create(name: "Elliott", age: 31, experience: "moderate")
+hiker11 = Hiker.create(name: "Jason", age: 32, experience: "expert")
+hiker12 = Hiker.create(name: "Damon", age: 22, experience: "novice")
+
+Review.create(rating: 4, review: "Great hike!", hiker: hiker1, trail: trail1)
+Review.create(rating: 5, review: "Amazing!", hiker: hiker2, trail: trail1)
+Review.create(rating: 3, review: "Boring", hiker: hiker3, trail: trail1)
+Review.create(rating: 3, review: "Nice views, okay", hiker: hiker1, trail: trail2)
+Review.create(rating: 1, review: "Too flat", hiker: hiker2, trail: trail3)
+Review.create(rating: 4, review: "nice!", hiker: hiker3, trail: trail3)
+Review.create(rating: 5, review: "loved it", hiker: hiker2, trail: trail3)
+Review.create(rating: 5, review: "Would love to do it again!", hiker: hiker1, trail: trail4)
+Review.create(rating: 4, review: "okay", hiker: hiker2, trail: trail4)
+Review.create(rating: 3, review: "very sunny", hiker: hiker3, trail: trail4)
+Review.create(rating: 2, review: "pleseant", hiker: hiker4, trail: trail4)
+Review.create(rating: 1, review: "awful", hiker: hiker4, trail: trail4)
+Review.create(rating: 5, review: "nice", hiker: hiker4, trail: trail5)
+Review.create(rating: 5, review: "lovely", hiker: hiker4, trail: trail6)
+Review.create(rating: 4, review: "very strenous", hiker: hiker4, trail: trail7)
+Review.create(rating: 4, review: "so pretty", hiker: hiker4, trail: trail8)
+Review.create(rating: 5, review: "what a great hike!", hiker: hiker4, trail: trail9)
+Review.create(rating: 3, review: "great experience", hiker: hiker4, trail: trail10)
+Review.create(rating: 2, review: "Would love to do it again!", hiker: hiker4, trail: trail11)
+Review.create(rating: 1, review: "deplorable", hiker: hiker4, trail: trail12)
+Review.create(rating: 4, review: "great scents and smells", hiker: hiker4, trail: trail5)
+Review.create(rating: 5, review: "great, great hike!", hiker: hiker4, trail: trail6)
